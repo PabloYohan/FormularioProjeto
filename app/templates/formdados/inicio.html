@@ -1,4 +1,4 @@
-{% extends 'main.html' %} {% block content%}
+{% extends 'main.html' %} {% block content%} {% csrf_token %}
 <button class="btn btn-info rounded-pill px-3">
   <a class="btn btn-info" href="/logouts/">Sair</a>
 </button>
