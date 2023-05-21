@@ -1,0 +1,24 @@
+{% extends 'main.html' %} {% block content %}
+<form name="formLogin" id="formLogin" method="post" action="/validacao/">
+  <div class="col-6 mt-4 m-auto">
+    {% if msg %}
+    <div class="alert {{class}}">{{msg}}</div>
+    {% endif %} {% csrf_token %}
+    <input
+      class="form-control mt-4"
+      type="text"
+      name="user"
+      id="user"
+      placeholder="Nome de Usuário: "
+    />
+    <input
+      class="form-control mt-4"
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Senha: "
+    />
+    <input class="btn btn-dark mt-4" type="submit" value="Login" />
+  </div>
+</form>
+{% endblock %}
