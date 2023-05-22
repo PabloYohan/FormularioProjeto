@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://formularioprojeto-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['formularioprojeto-production.up.railway.app/validacao/']
 
 ROOT_URLCONF = 'main.urls'
 
