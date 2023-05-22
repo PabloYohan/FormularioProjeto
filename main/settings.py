@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-import django_heroku
+import django
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['formularioprojeto-production.up.railway.app/validacao/']
+CSRF_TRUSTED_ORIGINS = ['https://formularioprojeto-production.up.railway.app/']
 
 ROOT_URLCONF = 'main.urls'
 
@@ -125,7 +125,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIR = ('/static/')
-django_heroku.settings(locals())
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]
 
